@@ -1,11 +1,11 @@
-import { DocumentIcon, ImageIcon } from '@sanity/icons'
 import { defineArrayMember, defineField, defineType } from 'sanity'
 
+import { CodeIcon, DashboardIcon, ImageIcon, CommentIcon } from '@sanity/icons'
 export default defineType({
   name: 'project',
   title: 'Project',
   type: 'document',
-  icon: DocumentIcon,
+  icon: DashboardIcon,
   // Uncomment below to have edits publish automatically as you type
   // liveEdit: true,
   fields: [

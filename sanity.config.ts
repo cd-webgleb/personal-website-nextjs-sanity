@@ -18,9 +18,12 @@ import timeline from 'schemas/objects/timeline'
 import home from 'schemas/singletons/home'
 import settings from 'schemas/singletons/settings'
 
+//Gleb import
+import {schemaTypes} from 'schemas/movies/index';
+
 const title =
   process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE ||
-  'Next.js Personal Website with Sanity.io'
+  'Sanity Demo'
 
 export const PREVIEWABLE_DOCUMENT_TYPES: string[] = [
   home.name,
@@ -46,6 +49,9 @@ export default defineConfig({
       // Objects
       milestone,
       timeline,
+
+      // Gleb Movies
+      ...schemaTypes
     ],
   },
   plugins: [
