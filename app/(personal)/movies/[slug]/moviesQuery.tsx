@@ -1,6 +1,6 @@
 import { createClient, groq } from "next-sanity"
 import { apiVersion, dataset, projectId, useCdn } from 'lib/sanity.api'
-import {Image} from 'sanity';
+import {Block, Image} from 'sanity';
 
 export const movieQuery = groq`
   *[_type == "movie" && slug.current == $slug][0] {
@@ -9,7 +9,8 @@ export const movieQuery = groq`
     title,
     poster{
       asset->
-    }
+    },
+    overview
   }
 `
 
@@ -26,6 +27,7 @@ export interface MoviePayload {
     slug: string
     poster?: Image,
     title?: string,
+    overview: Block[]
 }
 
 const sanityClient = (token?: string) => {
