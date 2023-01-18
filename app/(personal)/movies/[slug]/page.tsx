@@ -20,9 +20,9 @@ async function Movie({ params }: Props) {
   return <>
     {/* <div>Movie: {data.title} Slug: {data.slug}</div> */}
     <h1 className="text-center text-[36px] font-bold pb-2">{data.title}</h1>
-    <div className="grid grid-cols-2">
+    <div className="grid grid-cols-2 gap-4">
         <Image 
-            className=""
+            className="object-cover w-full h-full"
             alt={'poster'}
             width={width}
             height={height}
