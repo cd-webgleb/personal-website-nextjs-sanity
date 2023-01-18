@@ -6,11 +6,7 @@ import { getProjectBySlug } from 'lib/sanity.client'
 import { previewData } from 'next/headers'
 import { notFound } from 'next/navigation'
 
-export default async function ProjectSlugRoute({
-  params,
-}: {
-  params: { slug: string }
-}) {
+export default async function ProjectSlugRoute({params}: { params: { slug: string } }) {
   const token = previewData().token || null
   const data = await getProjectBySlug({ slug: params.slug })
 
