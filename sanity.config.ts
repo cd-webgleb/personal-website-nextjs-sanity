@@ -20,6 +20,7 @@ import settings from 'schemas/singletons/settings'
 
 //Gleb import
 import {schemaTypes} from 'schemas/movies/index';
+import movie from 'schemas/movies/documents/movie'
 
 const title =
   process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE ||
@@ -29,6 +30,7 @@ export const PREVIEWABLE_DOCUMENT_TYPES: string[] = [
   home.name,
   page.name,
   project.name,
+  movie.name
 ]
 
 export default defineConfig({
